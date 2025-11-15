@@ -43,7 +43,7 @@ export const ContactSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
-                <div>
+                <div className="flex flex-col items-start">
                   <h4 className="font-medium">Email</h4>
                   <a
                     href="mailto:andyhplau@gmail.com"
@@ -58,7 +58,7 @@ export const ContactSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Linkedin className="h-6 w-6 text-primary" />
                 </div>
-                <div>
+                <div className="flex flex-col items-start">
                   <h4 className="font-medium">LinkedIn</h4>
                   <a
                     href="https://linkedin.com/in/andyhplau"
@@ -73,7 +73,7 @@ export const ContactSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <Github className="h-6 w-6 text-primary" />
                 </div>
-                <div>
+                <div className="flex flex-col items-start">
                   <h4 className="font-medium">GitHub</h4>
                   <a
                     href="https://github.com/andyhplau"
@@ -88,7 +88,7 @@ export const ContactSection = () => {
                 <div className="p-3 rounded-full bg-primary/10">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
-                <div>
+                <div className="flex flex-col items-start">
                   <h4 className="font-medium">Location</h4>
                   <a className="text-muted-foreground hover:text-primary transition-colors">
                     Vancouver, BC, Canada
