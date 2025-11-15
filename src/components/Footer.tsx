@@ -6,7 +6,6 @@ export const Footer = () => {
       <p className="text-sm text-muted-foreground">
         &copy; {new Date().getFullYear()} Andy Lau, All rights reserved.
       </p>
-
       <a
         href="#hero"
         className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
