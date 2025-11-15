@@ -1,5 +1,4 @@
 import React from "react";
-import { Briefcase } from "lucide-react";
 
 type Role = {
   company: string;
