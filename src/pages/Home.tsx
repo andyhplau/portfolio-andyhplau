@@ -19,8 +19,8 @@ export const Home = () => {
       {/* Main Content */}
       <main>
         <HeroSection />
-        <ExperienceSection />
         <SkillsSection />
+        <ExperienceSection />
         <ProjectSection />
         <ContactSection />
       </main>

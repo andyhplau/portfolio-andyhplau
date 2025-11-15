@@ -36,8 +36,8 @@ export const HeroSection = () => {
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact" className="cosmic-button">
-              Get In Touch
+            <a href="#projects" className="cosmic-button">
+              View My Work
             </a>
             <a
               href=""
@@ -45,8 +45,8 @@ export const HeroSection = () => {
             >
               Download Resume
             </a>
-            <a href="#projects" className="cosmic-button">
-              View My Work
+            <a href="#contact" className="cosmic-button">
+              Get In Touch
             </a>
           </div>
         </div>
