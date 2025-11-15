@@ -162,7 +162,7 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          <div className="bg-card p-8 rounded-lg shadow-xs">
+          <div className="bg-card/80 backdrop-blur-[2px] p-8 rounded-lg shadow-xs relative z-10">
             <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
 
             <form className="space-y-6" onSubmit={handleSubmit}>

@@ -1,87 +1,113 @@
-import { Briefcase, Code, User } from "lucide-react";
+import React from "react";
+import { Briefcase } from "lucide-react";
 
-export const ExperienceSection = () => {
+type Role = {
+  company: string;
+  title: string;
+  start: string;
+  end?: string;
+  bullets: string[];
+  location?: string;
+  logo?: string; // optional logo URL (public path or remote)
+};
+
+const sampleExperience: Role[] = [
+  {
+    company: "Acme Corp",
+    title: "Senior Software Engineer",
+    start: "Jan 2023",
+    end: "Present",
+    location: "Vancouver, BC",
+    bullets: [
+      "Led a team of 3 engineers to deliver a customer-facing React app.",
+      "Designed and shipped an analytics pipeline to track feature usage.",
+      "Improved API latency by 40% through targeted optimizations.",
+    ],
+    logo: "/skills/python.png",
+  },
+  {
+    company: "Beta Systems",
+    title: "Full-stack Developer",
+    start: "Jun 2020",
+    end: "Dec 2022",
+    location: "Remote",
+    bullets: [
+      "Built end-to-end features using TypeScript, Node.js, and Postgres.",
+      "Owned the CI/CD pipeline and reduced release friction.",
+    ],
+  },
+];
+
+export const ExperienceSection: React.FC<{ data?: Role[] }> = ({
+  data = sampleExperience,
+}) => {
   return (
-    <section id="experience" className="py-24 px-4 relative">
+    <section id="experience" className="py-24 px-4">
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          About <span className="text-primary">Me</span>
-        </h2>
+        <div className="flex items-center gap-4 mb-8">
+          <div className="p-3 rounded-full bg-primary/10">
+            <Briefcase className="h-5 w-5 text-primary" />
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold">Experience</h2>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">Passionate Developer</h3>
-            <p className="text-muted-foreground">
-              I am a passionate developer with a love for creating dynamic and
-              interactive web applications. My journey in tech started with a
-              curiosity for how things work, and it has evolved into a
-              full-fledged career.
-            </p>
-            <p className="text-muted-foreground">
-              I enjoy collaborating with others and continuously learning new
-              skills to enhance my craft. My goal is to build user-friendly
-              applications that make a positive impact on people's lives.
-            </p>
+        <div className="space-y-8">
+          {data.map((role, key) => {
+            const initials = role.company
+              .split(" ")
+              .map((s) => s[0])
+              .slice(0, 2)
+              .join("");
 
-            <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <a href="#contact" className="cosmic-button">
-                Get In Touch
-              </a>
-
-              <a
-                href=""
-                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+            return (
+              <article
+                key={key}
+                className="bg-card/80 backdrop-blur-[2px] p-6 rounded-lg shadow-xs hover:shadow-md transition-shadow relative z-10"
               >
-                Download Resume
-              </a>
-            </div>
-          </div>
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center relative overflow-hidden">
+                      <span className="text-primary font-semibold z-0">
+                        {initials}
+                      </span>
+                      {role.logo && (
+                        <img
+                          src={role.logo}
+                          alt={`${role.company} logo`}
+                          className="absolute inset-0 w-full h-full object-cover z-10"
+                          onError={(e) =>
+                            (e.currentTarget.style.display = "none")
+                          }
+                        />
+                      )}
+                    </div>
 
-          <div className="grid grid-cols-1 gap-6">
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Code className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Web Development</h4>
-                  <p className="text-muted-foreground">
-                    Building responsive and accessible web applications.
-                  </p>
-                </div>
-              </div>
-            </div>
+                    <div>
+                      <h3 className="text-xl font-semibold">{role.title}</h3>
+                      <p className="text-sm text-muted-foreground">
+                        {role.company}{" "}
+                        {role.location ? `• ${role.location}` : ""}
+                      </p>
+                    </div>
+                  </div>
 
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
+                  <div className="mt-3 md:mt-0 text-sm text-muted-foreground">
+                    {role.start} — {role.end ?? "Present"}
+                  </div>
                 </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
-                  <p className="text-muted-foreground">
-                    Crafting user-centered designs for web applications.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
-                  <p className="text-muted-foreground">
-                    Overseeing projects from conception to completion.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+                <ul className="mt-4 list-disc list-inside space-y-2 text-muted-foreground flex flex-col items-start">
+                  {role.bullets.map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
+              </article>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 };
+
+export default ExperienceSection;

@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className="py-4 px-4 bg-card relative border-t border-border mt-12 pt-4 flex flex-wrap justify-between items-center">
       <p className="text-sm text-muted-foreground">
-        &copy; {new Date().getFullYear()} Andy Lau, All rights reserved.
+        &copy; {new Date().getFullYear()} Andy Lau. All rights reserved.
       </p>
       <a
         href="#hero"
