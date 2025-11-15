@@ -84,15 +84,6 @@ export const ContactSection = () => {
         variant: "destructive",
       });
     }
-
-    // setTimeout(() => {
-    //   toast({
-    //     title: "Message Sent!",
-    //     description:
-    //       "Thank you for reaching out. I will get back to you as soon as possible.",
-    //   });
-    //   setIsSubmitting(false);
-    // }, 1500);
   };
 
   return (
@@ -171,13 +162,10 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          <div
-            className="bg-card p-8 rounded-lg shadow-xs"
-            onSubmit={handleSubmit}
-          >
+          <div className="bg-card p-8 rounded-lg shadow-xs">
             <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
 
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label htmlFor="name" className="flex text-sm font-medium mb-2">
                   Name
@@ -189,6 +177,7 @@ export const ContactSection = () => {
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="John Doe"
+                  value={formData.name}
                   onChange={handleInputChange}
                 />
               </div>
@@ -207,6 +196,7 @@ export const ContactSection = () => {
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="johndoe@example.com"
+                  value={formData.email}
                   onChange={handleInputChange}
                 />
               </div>
@@ -225,6 +215,7 @@ export const ContactSection = () => {
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="Inquiry about..."
+                  value={formData.title}
                   onChange={handleInputChange}
                 />
               </div>
@@ -242,6 +233,7 @@ export const ContactSection = () => {
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Hello Andy..."
+                  value={formData.message}
                   onChange={handleInputChange}
                 />
               </div>
