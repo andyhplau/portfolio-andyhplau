@@ -44,12 +44,9 @@ export const ExperienceSection: React.FC<{ data?: Role[] }> = ({
   return (
     <section id="experience" className="py-24 px-4">
       <div className="container mx-auto max-w-5xl">
-        <div className="flex items-center gap-4 mb-8">
-          <div className="p-3 rounded-full bg-primary/10">
-            <Briefcase className="h-5 w-5 text-primary" />
-          </div>
-          <h2 className="text-3xl md:text-4xl font-bold">Experience</h2>
-        </div>
+        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
+          My <span className="text-primary"> Experience</span>
+        </h2>
 
         <div className="space-y-8">
           {data.map((role, key) => {
