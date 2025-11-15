@@ -2,24 +2,97 @@ import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/useToast";
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export const ContactSection = () => {
   const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    title: "",
+    message: "",
+  });
+  const [formStatus, setFormStatus] = useState({
+    submitting: false,
+    success: false,
+    error: false,
+    message: "",
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    setIsSubmitting(true);
+    setFormStatus({
+      submitting: true,
+      success: false,
+      error: false,
+      message: "",
+    });
 
-    setTimeout(() => {
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          email: formData.email,
+          title: formData.title,
+          message: formData.message,
+        }
+      );
+
+      setFormStatus({
+        submitting: false,
+        success: true,
+        error: false,
+        message: "Message sent successfully!",
+      });
+
       toast({
         title: "Message Sent!",
         description:
           "Thank you for reaching out. I will get back to you as soon as possible.",
       });
-      setIsSubmitting(false);
-    }, 1500);
+
+      setFormData({
+        name: "",
+        email: "",
+        title: "",
+        message: "",
+      });
+    } catch (error) {
+      setFormStatus({
+        submitting: false,
+        success: false,
+        error: true,
+        message: "Failed to send message. Please try again later.",
+      });
+
+      console.error("EmailJS Error:", error);
+
+      toast({
+        title: "Error",
+        description:
+          "There was an issue sending your message. Please try again later.",
+        variant: "destructive",
+      });
+    }
+
+    // setTimeout(() => {
+    //   toast({
+    //     title: "Message Sent!",
+    //     description:
+    //       "Thank you for reaching out. I will get back to you as soon as possible.",
+    //   });
+    //   setIsSubmitting(false);
+    // }, 1500);
   };
 
   return (
@@ -107,7 +180,7 @@ export const ContactSection = () => {
             <form className="space-y-6">
               <div>
                 <label htmlFor="name" className="flex text-sm font-medium mb-2">
-                  Your Name
+                  Name
                 </label>
                 <input
                   type="text"
@@ -116,6 +189,7 @@ export const ContactSection = () => {
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="John Doe"
+                  onChange={handleInputChange}
                 />
               </div>
 
@@ -124,7 +198,7 @@ export const ContactSection = () => {
                   htmlFor="email"
                   className="flex text-sm font-medium mb-2"
                 >
-                  Your Email
+                  Email
                 </label>
                 <input
                   type="email"
@@ -133,6 +207,25 @@ export const ContactSection = () => {
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
                   placeholder="johndoe@example.com"
+                  onChange={handleInputChange}
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="title"
+                  className="flex text-sm font-medium mb-2"
+                >
+                  Message Title
+                </label>
+                <input
+                  type="text"
+                  id="title"
+                  name="title"
+                  required
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary"
+                  placeholder="Inquiry about..."
+                  onChange={handleInputChange}
                 />
               </div>
 
@@ -141,7 +234,7 @@ export const ContactSection = () => {
                   htmlFor="message"
                   className="flex text-sm font-medium mb-2"
                 >
-                  Your Message
+                  Message
                 </label>
                 <textarea
                   id="message"
@@ -149,17 +242,18 @@ export const ContactSection = () => {
                   required
                   className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none"
                   placeholder="Hello Andy..."
+                  onChange={handleInputChange}
                 />
               </div>
 
               <button
                 type="submit"
-                disabled={isSubmitting}
+                disabled={formStatus.submitting}
                 className={cn(
                   "cosmic-button w-full flex items-center justify-center gap-2"
                 )}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                {formStatus.submitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
               </button>
             </form>
