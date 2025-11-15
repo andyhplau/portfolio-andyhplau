@@ -20,8 +20,19 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            about myself sdfjlkwh werofwiejf kwejfijwehf weopfjwejfoi
+          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3 text-left">
+            I am a software engineer who enjoys building end-to-end
+            solutions—front to back—and using data to guide better product
+            decisions. My experience spans full-stack development, API design,
+            SQL databases, analytics integrations, and automation.
+            <br />
+            <br />I have built production features for consumer-facing
+            applications, integrated analytics to track users, and created
+            backend services and pipelines that improve performance and
+            reliability. With a foundation in software development from BCIT and
+            hands-on operational analysis experience, I bring a mix of
+            engineering skill, analytical thinking, and product awareness to
+            every project.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
