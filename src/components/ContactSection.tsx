@@ -1,7 +1,27 @@
 import { Github, Linkedin, Mail, MapPin, Send } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useToast } from "@/hooks/useToast";
+import { useState } from "react";
 
 export const ContactSection = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setIsSubmitting(true);
+
+    setTimeout(() => {
+      toast({
+        title: "Message Sent!",
+        description:
+          "Thank you for reaching out. I will get back to you as soon as possible.",
+      });
+      setIsSubmitting(false);
+    }, 1500);
+  };
+
   return (
     <section id="contact" className="py-24 px-4 relative -bg-secondary/30">
       <div className="container mx-auto max-w-5xl">
@@ -78,7 +98,10 @@ export const ContactSection = () => {
             </div>
           </div>
 
-          <div className="bg-card p-8 rounded-lg shadow-xs">
+          <div
+            className="bg-card p-8 rounded-lg shadow-xs"
+            onSubmit={handleSubmit}
+          >
             <h3 className="text-2xl font-semibold mb-6">Send Me a Message</h3>
 
             <form className="space-y-6">
@@ -131,11 +154,12 @@ export const ContactSection = () => {
 
               <button
                 type="submit"
+                disabled={isSubmitting}
                 className={cn(
                   "cosmic-button w-full flex items-center justify-center gap-2"
                 )}
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
                 <Send size={16} />
               </button>
             </form>
