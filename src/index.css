@@ -17,7 +17,7 @@
   --animate-fade-in-delay-2: fade-in 0.7s ease-out 0.4s forwards;
   --animate-fade-in-delay-3: fade-in 0.7s ease-out 0.6s forwards;
   --animate-fade-in-delay-4: fade-in 0.7s ease-out 0.8s forwards;
-  --animate-meteor: meteor 5s linear infinite;
+  --animate-snowflake: snowflake 20s linear infinite;
 
   @keyframes float {
     0%,
@@ -47,16 +47,16 @@
       transform: translateY(0);
     }
   }
-  @keyframes meteor {
+  @keyframes snowflake {
     0% {
-      transform: rotate(215deg) translateX(0);
+      transform: rotate(270deg) translateX(0);
       opacity: 1;
     }
     70% {
       opacity: 1;
     }
     100% {
-      transform: rotate(215deg) translateX(-500px);
+      transform: rotate(270deg) translateX(-500px);
       opacity: 0;
     }
   }
@@ -64,12 +64,13 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
+    --background: 203 95% 90%;
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
 
-    --primary: 250 47% 60%;
+    /* Primary: vivid blue for accents */
+    --primary: 212 90% 48%;
     --primary-foreground: 210 40% 98%;
 
     --border: 214 32% 91%;
@@ -81,7 +82,8 @@
 
     --card: 222 47% 8%;
 
-    --primary: 250 65% 65%;
+    /* Dark theme primary (blue, slightly lighter for visibility) */
+    --primary: 212 90% 60%;
     --primary-foreground: 213 31% 91%;
 
     --border: 217 33% 20%;
@@ -147,9 +149,30 @@
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
 }
 
-@utility meteor {
-  @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
-  box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+@utility snowflake {
+  @apply absolute rounded-full;
+  /* subtle filled-white with a faint border so flakes show on pale backgrounds */
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(255, 255, 255, 0.9) 60%,
+    transparent 100%
+  );
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.08);
+
+  z-index: 0;
+}
+
+/* Stronger, brighter flakes in dark mode for contrast */
+.dark .snowflake {
+  background: radial-gradient(
+    circle at 30% 30%,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 255, 255, 0.95) 70%,
+    transparent 100%
+  );
+  border: 0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.9);
 }
 
 #root {
