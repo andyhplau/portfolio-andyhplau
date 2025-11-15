@@ -4,7 +4,7 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col items-center justify-center px-4"
+      className="relative min-h-screen flex flex-col items-center justify-center px-4 pt-20 md:pt-0"
     >
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
@@ -35,7 +35,16 @@ export const HeroSection = () => {
             every project.
           </p>
 
-          <div className="pt-4 opacity-0 animate-fade-in-delay-4">
+          <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#contact" className="cosmic-button">
+              Get In Touch
+            </a>
+            <a
+              href=""
+              className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+            >
+              Download Resume
+            </a>
             <a href="#projects" className="cosmic-button">
               View My Work
             </a>
