@@ -58,7 +58,7 @@ export const ProjectSection = () => {
                 />
               </div>
               <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap justify-center gap-2 mb-4">
                   {project.tags.map((tag, key) => (
                     <span
                       key={key}
