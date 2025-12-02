@@ -1,33 +1,43 @@
 import { ArrowRight, ExternalLink, Github } from "lucide-react";
 
-const projects = [
+type Project = {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  demoUrl?: string;
+  gitHubUrl: string;
+};
+
+const projects: Project[] = [
   {
     id: 1,
-    title: "Project One",
-    description: "Description for project one.",
-    image: "/projects/project1.png",
-    tags: ["React", "TailwindCSS"],
-    demoUrl: "https://example.com/project-one",
-    gitHubUrl: "https://github.com/example/project-one",
+    title: "QArticle",
+    description:
+      "Built a secure, question-answering application that delivers accurate, context-aware answers and summaries from user-uploaded articles. Implemented authentication and usage limits to manage secure document processing and query allowances.",
+    image: "/projects/pythonCodeImage.png",
+    tags: ["Python", "Django", "AI"],
+    gitHubUrl: "https://github.com/andyhplau/comp4537_c2p_api_server",
   },
-  {
-    id: 2,
-    title: "Project Two",
-    description: "Description for project two.",
-    image: "/projects/project2.png",
-    tags: ["React", "TailwindCSS"],
-    demoUrl: "https://example.com/project-two",
-    gitHubUrl: "https://github.com/example/project-two",
-  },
-  {
-    id: 3,
-    title: "Project Three",
-    description: "Description for project three.",
-    image: "/projects/project3.png",
-    tags: ["React", "TailwindCSS"],
-    demoUrl: "https://example.com/project-three",
-    gitHubUrl: "https://github.com/example/project-three",
-  },
+  // {
+  //   id: 2,
+  //   title: "Project Two",
+  //   description: "Description for project two.",
+  //   image: "/projects/project2.png",
+  //   tags: ["React", "TailwindCSS"],
+  //   demoUrl: "https://example.com/project-two",
+  //   gitHubUrl: "https://github.com/example/project-two",
+  // },
+  // {
+  //   id: 3,
+  //   title: "Project Three",
+  //   description: "Description for project three.",
+  //   image: "/projects/project3.png",
+  //   tags: ["React", "TailwindCSS"],
+  //   demoUrl: "https://example.com/project-three",
+  //   gitHubUrl: "https://github.com/example/project-three",
+  // },
 ];
 
 export const ProjectSection = () => {
@@ -44,13 +54,7 @@ export const ProjectSection = () => {
           mind.
         </p>
 
-        <div className="text-center py-20 border-2 border-muted/30 rounded-lg bg-card/50">
-          <p className="text-lg text-muted-foreground">
-            More projects coming soon. Stay tuned!
-          </p>
-        </div>
-
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
             <div
               key={key}
@@ -76,18 +80,20 @@ export const ProjectSection = () => {
                 </div>
 
                 <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">
+                <p className="text-muted-foreground text-sm mb-4 text-start">
                   {project.description}
                 </p>
                 <div className="flex justify-center items-center">
                   <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      className="text-foreground/80 border rounded-full p-2 hover:text-primary bg-primary/20 transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        className="text-foreground/80 border rounded-full p-2 hover:text-primary bg-primary/20 transition-colors duration-300"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                    )}
                     <a
                       href={project.gitHubUrl}
                       target="_blank"
@@ -100,7 +106,7 @@ export const ProjectSection = () => {
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
 
         <div className="text-center mt-12">
           <a
