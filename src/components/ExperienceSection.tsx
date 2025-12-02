@@ -5,35 +5,71 @@ type Role = {
   title: string;
   start: string;
   end?: string;
-  bullets: string[];
+  summary: string;
   location?: string;
   logo?: string; // optional logo URL (public path or remote)
 };
 
 const sampleExperience: Role[] = [
   {
-    company: "Acme Corp",
-    title: "Senior Software Engineer",
-    start: "Jan 2023",
-    end: "Present",
+    company: "PREVUE HR",
+    title: "Full-Stack Developer - Internship",
+    start: "Sep 2024",
+    end: "Dec 2024",
     location: "Vancouver, BC",
-    bullets: [
-      "Led a team of 3 engineers to deliver a customer-facing React app.",
-      "Designed and shipped an analytics pipeline to track feature usage.",
-      "Improved API latency by 40% through targeted optimizations.",
-    ],
-    logo: "/skills/python.png",
+    summary:
+      "Developed a production-ready mobile application from scratch that utilizes OpenAI to execute complex HR workflows via natural language. Designed the complete end-to-end architecture, orchestrating connections between the mobile UI and backend APIs to support scalable task execution.",
+    logo: "/experience/prevueHr.png",
   },
   {
-    company: "Beta Systems",
-    title: "Full-stack Developer",
-    start: "Jun 2020",
-    end: "Dec 2022",
-    location: "Remote",
-    bullets: [
-      "Built end-to-end features using TypeScript, Node.js, and Postgres.",
-      "Owned the CI/CD pipeline and reduced release friction.",
-    ],
+    company: "One iota Golf Inc.",
+    title: "Backend Developer - Internship",
+    start: "Apr 2024",
+    end: "Dec 2024",
+    location: "New Westminster, BC",
+    summary:
+      "Implemented backend endpoints to track athlete daily habits for health analytics and documented clear API contracts to ensure seamless integration for frontend teams.",
+    logo: "/experience/oneIotaGolf.png",
+  },
+  {
+    company: "Airble Aviation Inc.",
+    title: "Full-Stack Developer",
+    start: "Jan 2023",
+    end: "Dec 2023",
+    location: "Richmond, BC",
+    summary:
+      "Engineered responsive UI components to enhance the cross-platform user experience and integrated analytics to track engagement for users. Collaborated within an Agile environment to refine features and drive data-driven strategies that increased user engagement.",
+    logo: "/experience/airble.png",
+  },
+  {
+    company: "British Columbia Institute of Technology",
+    title: "Academic Development",
+    start: "Jan 2022",
+    end: "Dec 2024",
+    location: "Burnaby, BC",
+    summary:
+      "Computer Systems Technology Diploma (Specialized in Database Systems), CGPA: 91%",
+    logo: "/experience/bcit.png",
+  },
+  {
+    company: "Maple Freight Partnership",
+    title: "Operations Analyst",
+    start: "Apr 2018",
+    end: "Dec 2021",
+    location: "Richmond, BC",
+    summary:
+      "Utilized self-taught Python skills to automate data transformation and reporting for thousands of freight records, significantly reducing processing time. Collaborated with management to analyze warehouse data and eliminate discrepancies, enhancing overall operational efficiency.",
+    logo: "/experience/mapleFreight.png",
+  },
+  {
+    company: "University of Alberta",
+    title: "Academic Development",
+    start: "Sep 2012",
+    end: "Apr 2016",
+    location: "Edmonton, AB",
+    summary:
+      "Bachelor of Science in Civil Engineering (Specialized in Structural Design and Construction Management)",
+    logo: "/experience/uAlberta.png",
   },
 ];
 
@@ -62,7 +98,7 @@ export const ExperienceSection: React.FC<{ data?: Role[] }> = ({
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between">
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center relative overflow-hidden">
+                    <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center relative overflow-hidden">
                       <span className="text-primary font-semibold z-0">
                         {initials}
                       </span>
@@ -70,7 +106,7 @@ export const ExperienceSection: React.FC<{ data?: Role[] }> = ({
                         <img
                           src={role.logo}
                           alt={`${role.company} logo`}
-                          className="absolute inset-0 w-full h-full object-cover z-10"
+                          className="absolute inset-0 w-full h-full object-contain z-10"
                           onError={(e) =>
                             (e.currentTarget.style.display = "none")
                           }
@@ -78,7 +114,7 @@ export const ExperienceSection: React.FC<{ data?: Role[] }> = ({
                       )}
                     </div>
 
-                    <div>
+                    <div className="text-start">
                       <h3 className="text-xl font-semibold">{role.title}</h3>
                       <p className="text-sm text-muted-foreground">
                         {role.company}{" "}
@@ -92,11 +128,9 @@ export const ExperienceSection: React.FC<{ data?: Role[] }> = ({
                   </div>
                 </div>
 
-                <ul className="mt-4 list-disc list-inside space-y-2 text-muted-foreground flex flex-col items-start">
-                  {role.bullets.map((b, i) => (
-                    <li key={i}>{b}</li>
-                  ))}
-                </ul>
+                <div className="mt-4 space-y-2 text-muted-foreground flex flex-col items-start text-start">
+                  {role.summary}
+                </div>
               </article>
             );
           })}
