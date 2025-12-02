@@ -20,19 +20,19 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3 text-left">
-            I am a software engineer who enjoys building end-to-end
-            solutions—front to back—and using data to guide better product
-            decisions. My experience spans full-stack development, API design,
-            SQL databases, analytics integrations, and automation.
+          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3 text-justify">
+            I am a Software Engineer whose journey began with a curiosity for
+            logic and problem-solving. My interest in programming started during
+            a first-year course while earning my BSc. in Civil Engineering. I
+            later applied these skills in a practical setting while working in
+            logistics , where I used programming to automate data processes.
             <br />
-            <br />I have built production features for consumer-facing
-            applications, integrated analytics to track users, and created
-            backend services and pipelines that improve performance and
-            reliability. With a foundation in software development from BCIT and
-            hands-on operational analysis experience, I bring a mix of
-            engineering skill, analytical thinking, and product awareness to
-            every project.
+            <br />
+            Today, I focus on architecting end-to-end solutions. I enjoy the
+            challenge of connecting complex backend logic with responsive user
+            interfaces and have successfully delivered production-ready
+            applications. I am committed to writing clean, maintainable code and
+            continuously learning new methodologies to build better software.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
