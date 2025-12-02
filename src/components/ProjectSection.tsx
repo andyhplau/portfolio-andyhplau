@@ -44,7 +44,13 @@ export const ProjectSection = () => {
           mind.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="text-center py-20 border-2 border-muted/30 rounded-lg bg-card/50">
+          <p className="text-lg text-muted-foreground">
+            More projects coming soon. Stay tuned!
+          </p>
+        </div>
+
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, key) => (
             <div
               key={key}
@@ -94,7 +100,7 @@ export const ProjectSection = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className="text-center mt-12">
           <a
