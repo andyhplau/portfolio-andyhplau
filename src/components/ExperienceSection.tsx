@@ -43,7 +43,7 @@ const sampleExperience: Role[] = [
   },
   {
     company: "British Columbia Institute of Technology",
-    title: "Academic Development",
+    title: "Education",
     start: "Jan 2022",
     end: "Dec 2024",
     location: "Burnaby, BC",
@@ -63,7 +63,7 @@ const sampleExperience: Role[] = [
   },
   {
     company: "University of Alberta",
-    title: "Academic Development",
+    title: "Education",
     start: "Sep 2012",
     end: "Apr 2016",
     location: "Edmonton, AB",
