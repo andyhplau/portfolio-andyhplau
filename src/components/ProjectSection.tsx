@@ -17,27 +17,50 @@ const projects: Project[] = [
     description:
       "Built a secure, question-answering application that delivers accurate, context-aware answers and summaries from user-uploaded articles. Implemented authentication and usage limits to manage secure document processing and query allowances.",
     image: "/projects/pythonCodeImage.png",
-    tags: ["Python", "Django", "AI"],
+    tags: ["Academic Project", "Python", "Django", "AI"],
     gitHubUrl: "https://github.com/andyhplau/comp4537_c2p_api_server",
   },
-  // {
-  //   id: 2,
-  //   title: "Project Two",
-  //   description: "Description for project two.",
-  //   image: "/projects/project2.png",
-  //   tags: ["React", "TailwindCSS"],
-  //   demoUrl: "https://example.com/project-two",
-  //   gitHubUrl: "https://github.com/example/project-two",
-  // },
-  // {
-  //   id: 3,
-  //   title: "Project Three",
-  //   description: "Description for project three.",
-  //   image: "/projects/project3.png",
-  //   tags: ["React", "TailwindCSS"],
-  //   demoUrl: "https://example.com/project-three",
-  //   gitHubUrl: "https://github.com/example/project-three",
-  // },
+  {
+    id: 2,
+    title: "My Apple Pie",
+    description:
+      "This platform fosters a supportive ecosystem for wellness by integrating social connection with a gamified habit tracker that rewards consistency. Through our unique 'apples-to-pies' incentive structure, we encourage long-term user retention by making healthy routines both collaborative and rewarding.",
+    image: "/projects/myApplePie.png",
+    tags: ["Hackathon", "JavaScript", "HTML", "CSS"],
+    demoUrl: "https://devpost.com/software/qds-2024-apple-pie",
+    gitHubUrl: "https://github.com/kevin-bcit/qds_team17",
+  },
+  {
+    id: 3,
+    title: "Snake Game",
+    description:
+      "A classic Snake game implemented in Python with Pygame, featuring score tracking, restart-on-game-over, and an optional auto-pilot mode.",
+    image: "/projects/snake.png",
+    tags: ["Academic Project", "Python", "Pygame"],
+    demoUrl: "https://youtu.be/4dFAM63RSQE",
+    gitHubUrl: "https://github.com/andyhplau/snake-game",
+  },
+  {
+    id: 4,
+    title: "Tetris",
+    description:
+      "A Python Tetris clone with freeze and bomb tetrominoes, next-piece preview, and scoring; implemented with clean OOP and factory-based tetromino generation.",
+    image: "/projects/tetris.png",
+    tags: ["Academic Project", "Python", "Pygame"],
+    demoUrl: "https://youtu.be/x9Wi3KAxEOE",
+    gitHubUrl: "https://github.com/andyhplau/tetris",
+  },
+  {
+    id: 5,
+    title: "Maze Runner",
+    description:
+      "Developed a time-sensitive maze navigation game where players guide a selected Pokémon to the exit before the clock runs out. The application features a persistent history module, allowing users to track and review their past performance data.",
+    image: "/projects/mazeRunner.png",
+    tags: ["Academic Project", "Java", "JavaFX"],
+    demoUrl: "https://youtu.be/t-ldVlIE2dg",
+    gitHubUrl:
+      "https://github.com/andyhplau/2522-202230-Term-Project-MazeRunner",
+  },
 ];
 
 export const ProjectSection = () => {
