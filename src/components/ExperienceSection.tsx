@@ -38,7 +38,7 @@ const sampleExperience: Role[] = [
     end: "Dec 2023",
     location: "Richmond, BC",
     summary:
-      "Engineered responsive UI components to enhance the cross-platform user experience and integrated analytics to track engagement for users. Collaborated within an Agile environment to refine features and drive data-driven strategies that increased user engagement.",
+      "Implemented responsive front-end components and scalable backend services to deliver cross-platform (web and mobile) features, and integrated analytics to instrument user behavior. Collaborated with product and engineering in an Agile workflow to iterate on features using data-driven insights, improving user engagement and product performance.",
     logo: "/experience/airble.png",
   },
   {
