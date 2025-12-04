@@ -21,18 +21,19 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3 text-justify">
-            I am a Software Engineer whose journey began with a curiosity for
-            logic and problem-solving. My interest in programming started during
-            a first-year course while earning my BSc. in Civil Engineering. I
-            later applied these skills in a practical setting while working in
-            logistics , where I used programming to automate data processes.
+            I am a Software Engineer and recent graduate of the BCIT Computer
+            Systems Technology program. My passion for coding began with a
+            programming course in the first year of my Civil Engineering degree
+            and grew as I self-taught Python to automate logistics workflows.
             <br />
             <br />
-            Today, I focus on architecting end-to-end solutions. I enjoy the
-            challenge of connecting complex backend logic with responsive user
-            interfaces and have successfully delivered production-ready
-            applications. I am committed to writing clean, maintainable code and
-            continuously learning new methodologies to build better software.
+            Professionally, I bring over a year of hands-on software development
+            experience, primarily from my role as a Full-Stack Developer at
+            Airble Aviation. During my time there, I integrated analytics SDK
+            and built features for a complex flight booking system for private
+            jets with the option to shared seats. I specialize in architecting
+            end-to-end solutions and am dedicated to continuous learning and
+            delivering production-ready code.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
