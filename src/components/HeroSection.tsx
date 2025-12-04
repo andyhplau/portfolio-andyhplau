@@ -30,9 +30,10 @@ export const HeroSection = () => {
             <br />
             Professionally, I bring over a year of full-stack experience,
             notably at Airble Aviation. In this role, I integrated analytics SDK
-            and implemented new features for a private charter flights
-            marketplace. I specialize in architecting end-to-end solutions and
-            am committed to delivering clean, production-ready code.
+            and implemented new features for a marketplace for private charter
+            flights and shared seats. I specialize in architecting end-to-end
+            solutions and am committed to delivering clean, production-ready
+            code.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
