@@ -31,6 +31,7 @@ const skills = [
   { name: "Django", image: "/skills/django.png", category: "frameworks" },
   { name: "Node.js", image: "/skills/nodejs.png", category: "tools" },
   { name: "MySQL", image: "/skills/mysql.png", category: "databases" },
+  { name: "Prisma", image: "/skills/prisma.png", category: "tools" },
   { name: "Git", image: "/skills/git.png", category: "tools" },
   { name: "GitHub", image: "/skills/github.png", category: "tools" },
   {
