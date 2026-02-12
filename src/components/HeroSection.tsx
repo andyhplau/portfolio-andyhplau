@@ -21,19 +21,18 @@ export const HeroSection = () => {
           </h1>
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3 text-justify">
-            I am a Software Engineer and recent graduate of the BCIT Computer
-            Systems Technology program. My technical foundation began with a
-            programming course during my Civil Engineering degree. This interest
-            extended into my logistics career, where I self-taught Python to
-            automate complex data workflows.
+            I am a Full-Stack Engineer with a passion for building scalable web
+            applications and efficient internal tools. With 4+ years of hands-on
+            experience, I have a proven track record of delivering end-to-end
+            solutions—from co-developing centralized logistics systems with
+            Django and React to optimizing Next.js architectures for
+            high-traffic aviation platforms.
             <br />
             <br />
-            Professionally, I bring over a year of full-stack experience,
-            notably at Airble Aviation. In this role, I integrated analytics SDK
-            and implemented new features for a marketplace for private charter
-            flights and shared seats. I specialize in architecting end-to-end
-            solutions and am committed to delivering clean, production-ready
-            code.
+            My background spans both fast-paced startups and structured
+            engineering environments. I specialize in Python, TypeScript, and
+            Cloud Infrastructure, committed to writing maintainable code that
+            drives real business value.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4 flex flex-col sm:flex-row gap-4 justify-center">
