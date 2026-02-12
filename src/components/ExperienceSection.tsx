@@ -13,32 +13,32 @@ type Role = {
 const sampleExperience: Role[] = [
   {
     company: "PREVUE HR",
-    title: "Full-Stack Developer - Internship",
+    title: "Full-Stack Engineer",
     start: "Sep 2024",
     end: "Dec 2024",
     location: "Vancouver, BC",
     summary:
-      "Developed a production-ready mobile application from scratch that utilizes OpenAI to execute complex HR workflows via natural language. Designed the complete end-to-end architecture, orchestrating connections between the mobile UI and backend APIs to support scalable task execution.",
+      "Engineered a production-ready mobile chatbot utilizing OpenAI to execute complex HR workflows via natural language. Designed the complete end-to-end architecture, orchestrating secure backend integrations and prompt engineering to support scalable task execution.",
     logo: "/experience/prevueHr.png",
   },
   {
     company: "One iota Golf Inc.",
-    title: "Backend Developer - Internship",
+    title: "Backend Developer",
     start: "Apr 2024",
     end: "Dec 2024",
     location: "New Westminster, BC",
     summary:
-      "Implemented backend endpoints to track athlete daily habits for health analytics and documented clear API contracts to ensure seamless integration for frontend teams.",
+      "Built robust backend infrastructure to track athlete health analytics, designing high-performance API endpoints using TypeScript and MySQL. Documented strict OpenAPI/Swagger contracts, ensuring type safety and seamless integration for frontend teams.",
     logo: "/experience/oneIotaGolf.png",
   },
   {
     company: "Airble Aviation Inc.",
-    title: "Full-Stack Developer",
+    title: "Full-Stack Engineer",
     start: "Jan 2023",
     end: "Dec 2023",
     location: "Richmond, BC",
     summary:
-      "Implemented responsive front-end components and scalable backend services to deliver cross-platform (web and mobile) features, and integrated analytics to instrument user behavior. Collaborated with product and engineering in an Agile workflow to iterate on features using data-driven insights, improving user engagement and product performance.",
+      "Optimized core flight booking engines for a high-traffic marketplace serving 20,000+ users. Leveraged Next.js and GraphQL to implement dynamic search features and integrated analytics instrumentation, driving a 15% increase in user engagement through data-driven iterations.",
     logo: "/experience/airble.png",
   },
   {
@@ -53,12 +53,12 @@ const sampleExperience: Role[] = [
   },
   {
     company: "Maple Freight Partnership",
-    title: "Operations Analyst",
+    title: "Software Engineer",
     start: "Apr 2018",
     end: "Dec 2021",
     location: "Richmond, BC",
     summary:
-      "Utilized self-taught Python skills to automate data transformation and reporting for thousands of freight records, significantly reducing processing time. Collaborated with management to analyze warehouse data and eliminate discrepancies, enhancing overall operational efficiency.",
+      "Co-architected a centralized logistics platform using React and Django, migrating the company from manual spreadsheets to a full-cycle web application. Engineered a financial module that automated complex invoicing workflows and shipment tracking, significantly increasing operational throughput and reducing billing cycles.",
     logo: "/experience/mapleFreight.png",
   },
   {
