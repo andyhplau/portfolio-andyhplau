@@ -53,12 +53,12 @@ const sampleExperience: Role[] = [
   },
   {
     company: "Maple Freight Partnership",
-    title: "Software Engineer",
+    title: "Operations Analyst",
     start: "Apr 2018",
     end: "Dec 2021",
     location: "Richmond, BC",
     summary:
-      "Co-architected a centralized logistics platform using React and Django, migrating the company from manual spreadsheets to a full-cycle web application. Engineered a financial module that automated complex invoicing workflows and shipment tracking, significantly increasing operational throughput and reducing billing cycles.",
+      "Utilized self-taught Python skills to automate data transformation and reporting for thousands of freight records, significantly reducing processing time. Collaborated with management to analyze warehouse data and eliminate discrepancies, enhancing overall operational efficiency.",
     logo: "/experience/mapleFreight.png",
   },
   {
