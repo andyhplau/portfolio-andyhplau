@@ -23,7 +23,7 @@ const sampleExperience: Role[] = [
   },
   {
     company: "Prevue HR",
-    title: "Full-Stack Engineer",
+    title: "Full-Stack Developer",
     start: "Sep 2024",
     end: "Dec 2024",
     location: "Vancouver, BC",
@@ -43,7 +43,7 @@ const sampleExperience: Role[] = [
   },
   {
     company: "Airble Aviation Inc.",
-    title: "Full-Stack Engineer",
+    title: "Full-Stack Developer",
     start: "Jan 2023",
     end: "Dec 2023",
     location: "Richmond, BC",
