@@ -12,13 +12,23 @@ type Role = {
 
 const sampleExperience: Role[] = [
   {
-    company: "PREVUE HR",
+    company: "U-Dry",
+    title: "Software Engineer",
+    start: "Nov 2025",
+    end: "Present",
+    location: "Remote (Hong Kong)",
+    summary:
+      "Rebuilt an AI-prototyped umbrella rental mobile app into a production-grade codebase, refactoring the architecture for long-term maintainability and shipping fixes across payment, map rendering, and data synchronization. Established a proper development environment and CI/CD pipeline to replace ad-hoc deployments, and extended the app with features like social login to reduce onboarding friction.",
+    logo: "/experience/u-dry.png",
+  },
+  {
+    company: "Prevue HR",
     title: "Full-Stack Engineer",
     start: "Sep 2024",
     end: "Dec 2024",
     location: "Vancouver, BC",
     summary:
-      "Engineered a production-ready mobile chatbot utilizing OpenAI to execute complex HR workflows via natural language. Designed the complete end-to-end architecture, orchestrating secure backend integrations and prompt engineering to support scalable task execution.",
+      "Engineered a production-ready mobile chatbot using the OpenAI API to let HR staff retrieve reports through natural language queries. Designed the end-to-end architecture, mapping GPT function calls to secure backend endpoints and handling prompt engineering to support scalable, auditable task execution.",
     logo: "/experience/prevueHr.png",
   },
   {
@@ -38,7 +48,7 @@ const sampleExperience: Role[] = [
     end: "Dec 2023",
     location: "Richmond, BC",
     summary:
-      "Optimized core flight booking engines for a high-traffic marketplace serving 20,000+ users. Leveraged Next.js and GraphQL to implement dynamic search features and integrated analytics instrumentation, driving a 15% increase in user engagement through data-driven iterations.",
+      "Contributed to the core booking engine of a private jet marketplace serving 20,000+ users, working across Next.js, GraphQL, and the underlying MySQL data layer. Rebuilt airport search to be location-aware, automatically surfacing the user's nearest major airport first to guide travelers unfamiliar with private aviation, and integrated Segment analytics that contributed to a 15% lift in engagement.",
     logo: "/experience/airble.png",
   },
   {
@@ -58,7 +68,7 @@ const sampleExperience: Role[] = [
     end: "Dec 2021",
     location: "Richmond, BC",
     summary:
-      "Utilized self-taught Python skills to automate data transformation and reporting for thousands of freight records, significantly reducing processing time. Collaborated with management to analyze warehouse data and eliminate discrepancies, enhancing overall operational efficiency.",
+      "Taught myself Python on personal time to automate data transformation and reporting for thousands of freight records, significantly reducing processing time. Partnered with management to reconcile warehouse data discrepancies and improve operational efficiency across the team.",
     logo: "/experience/mapleFreight.png",
   },
   {
