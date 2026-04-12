@@ -33,7 +33,7 @@ const sampleExperience: Role[] = [
   },
   {
     company: "One iota Golf Inc.",
-    title: "Backend Developer",
+    title: "Software Developer",
     start: "Apr 2024",
     end: "Dec 2024",
     location: "New Westminster, BC",
