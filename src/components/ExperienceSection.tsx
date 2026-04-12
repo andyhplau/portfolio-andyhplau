@@ -35,7 +35,7 @@ const sampleExperience: Role[] = [
     company: "One iota Golf Inc.",
     title: "Software Developer",
     start: "Apr 2024",
-    end: "Dec 2024",
+    end: "May 2024",
     location: "New Westminster, BC",
     summary:
       "Built robust backend infrastructure to track athlete health analytics, designing high-performance API endpoints using TypeScript and MySQL. Documented strict OpenAPI/Swagger contracts, ensuring type safety and seamless integration for frontend teams.",
