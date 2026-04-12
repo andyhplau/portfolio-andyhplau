@@ -14,7 +14,7 @@ const sampleExperience: Role[] = [
   {
     company: "U-Dry",
     title: "Software Engineer",
-    start: "Nov 2025",
+    start: "Jul 2025",
     end: "Present",
     location: "Remote (Hong Kong)",
     summary:
